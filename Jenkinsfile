@@ -19,15 +19,15 @@ pipeline {
                 ansiColor('xterm')
             }
     stages {
-    //     stage('checkout') {
-    //         steps {
-    //              script{
-    //                     dir("terraform")
-    //                     {
-    //                         git "https://github.com/easyawslearn/Terraform-Tutorial.git"
-    //                     }
-    //                 }
-    //             }
+         stage('checkout') {
+             steps {
+                 script{
+                         dir("terraform")
+                         {
+                             git "https://github.com/easyawslearn/Terraform-Tutorial.git"
+                         }
+                    }
+                }
            }
 
         stage('Plan') {
@@ -61,5 +61,5 @@ pipeline {
             }
         }
     }
-
+}
   
