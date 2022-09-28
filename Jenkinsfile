@@ -58,6 +58,8 @@ pipeline {
         stage('Apply') {
             steps {
                 sh "pwd;cd terraform ; terraform apply -input=false tfplan"
+                //Then clean the workspace after deployment ignoring node_modules directory
+                cleanWs deleteDirs: true, patterns: [[pattern: 'node_modules', type: 'EXCLUDE']]
             }
         }
     }
