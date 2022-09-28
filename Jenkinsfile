@@ -18,7 +18,7 @@ pipeline {
                 timestamps ()
                 ansiColor('xterm')
             }
-    // stages {
+    stages {
     //     stage('checkout') {
     //         steps {
     //              script{
@@ -28,7 +28,7 @@ pipeline {
     //                     }
     //                 }
     //             }
-    //         }
+           }
 
         stage('Plan') {
             steps {
