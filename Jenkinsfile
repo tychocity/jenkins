@@ -24,7 +24,7 @@ pipeline {
                  script{
                          dir("terraform")
                          {
-                             git "https://github.com/tychocity/jenkins.git" branch: 'main'
+                             git branch: 'main', "https://github.com/tychocity/jenkins.git" 
                          }
                     }
                 }
