@@ -19,3 +19,5 @@ module "ec2_instance" {
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | region | AWS region | string | us-east-1 | yes |
+
+## primer version
