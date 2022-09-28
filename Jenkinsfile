@@ -19,12 +19,12 @@ pipeline {
                 ansiColor('xterm')
             }
     stages {
-         stage('clone') {
+         stage('checkout') {
              steps {
                  script{
                          dir("terraform")
                          {
-                             git "https://github.com/tychocity/jenkins.git"
+                             git "https://github.com/tychocity/jenkins.git" branch: 'main'
                          }
                     }
                 }
